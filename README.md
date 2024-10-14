@@ -1,2 +1,2 @@
 # Proyecto_STR
-Proyecto Sistema de Tiempo Real 2024
+Proyecto Sistemas de Tiempo Real 2024
