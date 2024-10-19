@@ -1,0 +1,24 @@
+V "GNAT Lib v3.13 "
+M P 0 W=b
+A -g
+P
+R nnnnrnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+
+U main%b		main.adb		489506F5 NE SU IL
+W fss%s			fss.adb			fss.ali
+W system%s		system.ads		system.ali
+
+D fss.ads		20240921223654 40408672
+D kernel.ads		20010312182047 56BBE4F1
+D kernel-parameters.ads	20010312182047 0D1B8F78
+D main.adb		20240921223805 22303A79
+D system.ads		20010312182047 2AE5BAFE
+X 1 fss.ads
+1U9*fss 4|1r6 10r4
+2U13*Background 4|10r8
+X 4 main.adb
+4U11*main
+X 5 system.ads
+46U9*System 4|2r6 6r21
+110I12*Priority 4|6r28
+

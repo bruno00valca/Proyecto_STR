@@ -1,0 +1,103 @@
+V "GNAT Lib v3.13 "
+A -g
+P
+R nnvnrnnvnnnnvvvvnvvvnnnnnnnnnnvnnnnnnnnnnnn
+
+U scenario_v1%s		scenario_v1.ads		52EA8984 PK
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W devicesfss_v1%s	devicesfss_v1.adb	devicesfss_v1.ali
+
+D ada.ads		20000718095948 2359F9ED
+D a-except.ads		20000718095948 287FCF69
+D a-finali.ads		20000718095948 3F32DEEF
+D a-filico.ads		20000718095948 1DECB9AC
+D a-reatim.ads		20000718095948 5DBAB303
+D a-stream.ads		20000718095948 5F7C277B
+D a-tags.ads		20000718095948 45EF7E4E
+D devicesfss_v1.ads	20240930123456 65131FAE
+D kernel.ads		20010312182047 56BBE4F1
+D kernel-cpu_primitives.ads  20010312182047 5746D7AD
+D kernel-interrupts.ads	20010312182047 72CD7AA3
+D kernel-parameters.ads	20010312182047 0D1B8F78
+D kernel-peripherals.ads  20010312182047 089544EF
+D kernel-threads.ads	20010312182047 234DAE87
+D kernel-time.ads	20010312182047 7A57ECF4
+D scenario_v1.ads	20240930123451 6A432529
+D system.ads		20010312182047 2AE5BAFE
+D s-exctab.ads		20000718095948 7A25F5F9
+D s-finimp.ads		20000718095949 1C201C0F
+D s-finroo.ads		20000718095949 166D4EDA
+D s-osinte.ads		20010312182047 7BFC1094
+D s-parame.ads		20000718095949 25FE086A
+D s-secsta.ads		20000718095949 60A2A5CD
+D s-soflin.ads		20000718095949 006B24D7
+D s-stache.ads		20000718095949 42B57F2A
+D s-stalib.ads		20000718095949 438B3864
+D s-stoele.ads		20000718095949 131D4539
+D s-stratt.ads		20000718095949 1761725B
+D s-tasinf.ads		20000718095949 0F7BBEC5
+D s-taspri.ads		20010312182047 3235B2AC
+D s-taprop.ads		20010312182047 36F12025
+D s-taskin.ads		20000718095949 09146F23
+D s-unstyp.ads		20000718095949 78AFB91D
+D unchconv.ads		20000718095949 72DC4539
+X 1 ada.ads
+18U9*Ada 16|2r6 2r25 10r29 10r56 11r26 11r53 13r29 13r56 14r34 14r61 15r32
+. 15r59 17r26 17r53 19r26 19r53 20r29 20r56 22r26 22r53 23r25 23r52 25r28
+. 25r55 26r26 26r53
+X 5 a-reatim.ads
+43U13*Real_Time 16|2r10 2r29 10r33 10r60 11r30 11r57 13r33 13r60 14r38 14r65
+. 15r36 15r63 17r30 17r57 19r30 19r57 20r33 20r60 22r30 22r57 23r29 23r56
+. 25r32 25r59 26r30 26r57
+50O9*Time_Span 16|10r43 11r40 13r43 14r48 15r46 17r40 19r40 20r43 22r40 23r39
+. 25r42 26r40
+89U13*Milliseconds 16|10r70 11r67 13r70 14r75 15r73 17r67 19r67 20r70 22r67
+. 23r66 25r69 26r67
+X 8 devicesfss_v1.ads
+4U9*devicesFSS_V1 16|3r6 3r25
+11I10*Distance_Samples_Type 16|37r76
+15I10*Light_Samples_Type 16|66r68
+54I10*Power_Samples_Type 16|162r68
+60A10*Joystick_Samples_Type 16|95r49
+68I10*PilotPresence_Samples_Type 16|192r84
+72I10*PilotButton_Samples_Type 16|220r80
+X 16 scenario_v1.ads
+5U9*Scenario_V1
+10O5*WCET_Distance
+11O5*WCET_Light
+13O5*WCET_Joystick
+14O5*WCET_PilotPresence
+15O5*WCET_PilotButton
+17O5*WCET_Power
+19O5*WCET_Speed
+20O5*WCET_Altitude
+22O5*WCET_Pitch
+23O5*WCET_Roll
+25O5*WCET_Display
+26O5*WCET_Alarm
+35N5*cantidad_datos_Distancia 36r44
+36M10*Indice_Secuencia_Distancia 37r45
+37A10*tipo_Secuencia_Distancia 39r26
+39a5*Distance_Simulation
+64N5*cantidad_datos_Light 65r40
+65M10*Indice_Secuencia_Light 66r41
+66A10*tipo_Secuencia_Light 68r33
+68a5*Light_Intensity_Simulation
+92N5*cantidad_datos_Joystick 93r43
+93M10*Indice_Secuencia_Joystick 94r44
+94A10*tipo_Secuencia_Joystick 97r26
+97a5*Joystick_Simulation
+160N5*cantidad_datos_Power 161r40
+161M10*Indice_Secuencia_Power 162r41
+162A10*tipo_Secuencia_Power 164r23
+164a5*Power_Simulation
+190N5*cantidad_datos_PilotPresence 191r48
+191M10*Indice_Secuencia_PilotPresence 192r49
+192A10*tipo_Secuencia_PilotPresence 194r31
+194a5*PilotPresence_Simulation
+218N5*cantidad_datos_PilotButton 219r46
+219M10*Indice_Secuencia_PilotButton 220r47
+220A10*tipo_Secuencia_PilotButton 222r29
+222a5*PilotButton_Simulation
+

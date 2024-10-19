@@ -1,0 +1,105 @@
+V "GNAT Lib v3.13 "
+A -g
+P
+R nnvnrnnvnnnnvvvvnvvvnnnnnnnnnnvnnnnnnnnnnnn
+
+U tools%b		tools.adb		3A26CB26 PK IL
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W kernel%s		kernel.ads		kernel.ali
+W kernel.serial_output%s  kernel-serial_output.adb  kernel-serial_output.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.img_real%s	s-imgrea.adb		s-imgrea.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W workload%s		workload.adb		workload.ali
+
+U tools%s		tools.ads		1D1095E4 PK IL
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+
+D ada.ads		20000718095948 2359F9ED
+D a-except.ads		20000718095948 287FCF69
+D a-finali.ads		20000718095948 3F32DEEF
+D a-filico.ads		20000718095948 1DECB9AC
+D a-reatim.ads		20000718095948 5DBAB303
+D a-stream.ads		20000718095948 5F7C277B
+D a-tags.ads		20000718095948 45EF7E4E
+D kernel.ads		20010312182047 56BBE4F1
+D kernel-cpu_primitives.ads  20010312182047 5746D7AD
+D kernel-interrupts.ads	20010312182047 72CD7AA3
+D kernel-parameters.ads	20010312182047 0D1B8F78
+D kernel-peripherals.ads  20010312182047 089544EF
+D kernel-serial_output.ads  20010312182047 16AD38F4
+D kernel-threads.ads	20010312182047 234DAE87
+D kernel-time.ads	20010312182047 7A57ECF4
+D system.ads		20010312182047 2AE5BAFE
+D s-exctab.ads		20000718095948 7A25F5F9
+D s-finimp.ads		20000718095949 1C201C0F
+D s-finroo.ads		20000718095949 166D4EDA
+D s-imgint.ads		20000718095949 21B5CB31
+D s-imgrea.ads		20000718095949 7AFCD204
+D s-osinte.ads		20010312182047 7BFC1094
+D s-parame.ads		20000718095949 25FE086A
+D s-secsta.ads		20000718095949 60A2A5CD
+D s-soflin.ads		20000718095949 006B24D7
+D s-stache.ads		20000718095949 42B57F2A
+D s-stalib.ads		20000718095949 438B3864
+D s-stoele.ads		20000718095949 131D4539
+D s-stratt.ads		20000718095949 1761725B
+D s-tasinf.ads		20000718095949 0F7BBEC5
+D s-taspri.ads		20010312182047 3235B2AC
+D s-taprop.ads		20010312182047 36F12025
+D s-taskin.ads		20000718095949 09146F23
+D s-unstyp.ads		20000718095949 78AFB91D
+D tools.ads		20240928193923 40AA26E7
+D tools.adb		20240928193925 0BC8437A
+D unchconv.ads		20000718095949 72DC4539
+D workload.ads		20191007063732 3A53254C
+X 1 ada.ads
+18U9*Ada 35|3r6 3r25 4r10 8r25 10r38 17r38 36|3r6 3r25 16r38 94r36 95r27
+. 97r37
+X 5 a-reatim.ads
+43U13*Real_Time 35|3r10 3r29 4r14 8r29 10r42 17r42 36|3r10 3r29 16r42 94r40
+. 95r31 97r41
+45O9*Time 35|8r39 10r52 36|16r52
+50O9*Time_Span 35|4r24 17r52 36|94r50 97r51
+57U13*Clock 35|8r47 36|22r59 31r59
+62U13*"-" 36|22r65 31r65
+74U13*"/" 36|100r38
+84U13*To_Duration 36|22r47 31r47
+87U13*Nanoseconds 36|95r41
+X 8 kernel.ads
+36U9*Kernel 36|2r6 2r32 22r7 31r7 43r7 58r7
+X 13 kernel-serial_output.ads
+36U16*Serial_Output 36|2r13 2r39 22r14 31r14 43r14 58r14
+41U14*Put 36|19r7 22r28 23r7 30r7 31r28 32r7 43r28 58r28 66r7 67r7 78r7 79r7
+. 86r7 87r7
+49U14*Put_Line 36|18r7 29r7
+X 35 tools.ads
+6U9*tools 36|11b14
+8O5*Big_Bang 36|31r67
+10U15*Current_Time 36|16b15
+10O29 Origen 36|16b29 22r67
+11U15*Print_Chrono 36|27b15 65r7 77r7 85r7
+12U15*Print_an_Integer 36|40b14
+12i33 x 36|40b32 43r47
+13U15*Print_a_Float 36|52b14
+13f30 x 36|52b29 57r30
+14U15*Print_a_String 36|62b14
+14s31 s 36|62b30 67r12
+15U15*Start_Activity 36|74b14
+15s31 T 36|74b30 79r12
+16U15*Finish_Activity 36|82b14
+16s32 T 36|82b31 87r12
+17U15*Execution_Time 36|97b14
+17O31 Time 36|97b30 100r33
+X 36 tools.adb
+53F13 Float_Printable 54r12 57r13 58r33
+54f8 nx 57m7 58r55
+94O4 Time_per_Kwhetstones 100r40
+X 38 workload.ads
+18U9*Workload 36|7r6 100r7
+41U13*Small_Whetstone 36|100r16
+
