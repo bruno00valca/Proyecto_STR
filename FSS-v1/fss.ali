@@ -3,7 +3,7 @@ A -g
 P LC TF
 R nnvvrnvvnnnnvvvvnvvvnnnnvnnnnnvnnnnnnnnnnnn
 
-U fss%b			fss.adb			2F6D94DF PK IL
+U fss%b			fss.adb			65A7CF69 PK IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
@@ -32,7 +32,7 @@ D a-stream.ads		20000718095948 5F7C277B
 D a-tags.ads		20000718095948 45EF7E4E
 D devicesfss_v1.ads	20241028164626 65131FAE
 D fss.ads		20241028164626 40408672
-D fss.adb		20241105160041 2B661AED
+D fss.adb		20241106193208 61AC415B
 D kernel.ads		20010312182047 56BBE4F1
 D kernel-cpu_primitives.ads  20010312182047 5746D7AD
 D kernel-interrupts.ads	20010312182047 72CD7AA3
@@ -67,59 +67,73 @@ X 1 ada.ads
 18U9*Ada 11|2r6 2r32
 X 5 a-reatim.ads
 43U13*Real_Time 11|2r10 2r36
-57U13*Clock 11|177r23
-59U13*"+" 11|177r29
-85U13*To_Time_Span 11|177r31
+57U13*Clock 11|182r23 242r19
+59U13*"+" 11|182r29 242r25
+85U13*To_Time_Span 11|182r31 242r27
 X 9 devicesfss_v1.ads
 4U9*devicesFSS_V1 11|6r6 7r5
-11I10*Distance_Samples_Type 11|90r19
-15I10*Light_Samples_Type 11|91r19
-31I10*Speed_Samples_Type 11|87r22 88r22 108r26
-33U14*Read_Speed 11|109r23 121r23
-34U15*Set_Speed 11|111r13 114r13 118r13 135r16 138r16 147r16 150r16 159r16
-. 162r16
-39I10*Pitch_Samples_Type 11|34r33 38r40 42r15 47r33 57r40 93r22
-44I10*Roll_Samples_Type 11|35r32 39r38 43r14 52r32 62r38 94r22
-54I10*Power_Samples_Type 11|86r22
-55U15*Read_Power 11|103r10
-80N27*On 11|112r22 115r22 136r25 148r25 160r25
-80N31*Off 11|117r22
-82U15*Light_2 11|112r13 115r13 117r13 136r16 148r16 160r16
-86U15*Alarm 11|168r13 170r16
-91U15*Display_Speed 11|122r10
-96U15*Display_Pilot_Power 11|104r10
+11I10*Distance_Samples_Type 11|94r19
+15I10*Light_Samples_Type 11|95r19
+24I10*Altitude_Samples_Type 11|193r16
+26U14*Read_Altitude 11|210r20
+27i5*Initial_Altitude 11|193r40
+31I10*Speed_Samples_Type 11|91r22 92r22 112r26
+33U14*Read_Speed 11|113r23 125r23
+34U15*Set_Speed 11|115r13 118r13 122r13 139r16 142r16 151r16 154r16 163r16
+. 166r16
+39I10*Pitch_Samples_Type 11|34r33 38r40 42r15 47r33 57r40 97r22 192r19 200r23
+44I10*Roll_Samples_Type 11|35r32 39r38 43r14 52r32 62r38 98r22
+54I10*Power_Samples_Type 11|90r22
+55U15*Read_Power 11|107r10
+58N37*x 11|200r52
+60A10*Joystick_Samples_Type 11|191r16
+62U15*Read_Joystick 11|199r7
+80N27*On 11|116r22 119r22 140r25 152r25 164r25 234r18 236r18
+80N31*Off 11|121r22 238r18
+81U15*Light_1 11|234r10 236r10 238r10
+82U15*Light_2 11|116r13 119r13 121r13 140r16 152r16 164r16
+86U15*Alarm 11|173r13 175r16
+90U15*Display_Altitude 11|201r7
+91U15*Display_Speed 11|126r10
+93U15*Display_Pitch 11|202r7
+96U15*Display_Pilot_Power 11|108r10
 X 10 fss.ads
 1U9*fss 11|14b14
 2U13*Background 11|19b14
 X 11 fss.adb
-32w14 Cabeceo_Alabeo_Protegido 126r26 127r25
-34U16 Get_Pitch 47b16 126r51
-35U16 Get_Roll 52b16 127r50
-38U17 Set_Pitch 57b17
+32w14 Cabeceo_Alabeo_Protegido 130r26 131r25 215r10 222r10 229r10
+34U16 Get_Pitch 47b16 130r51
+35U16 Get_Roll 52b16 131r50
+38U17 Set_Pitch 57b17 215r35 222r35 229r35
 38i28 New_Pitch 57b28 59r19
 39U17 Set_Roll 62b17
 39i27 New_Roll 62b27 64r18
 42i7 Pitch 49r17 59r10
 43i7 Roll 54r17 64r10
 74t9 Speed
-86i7 Current_Pw 103m21 104r31 108r53 167r13 169r16 171m16
-87i7 Current_S 109m10 121m10 122r25 131r56 132r16 138r27 143r37 144r16 150r27
-. 155r37 156r16 162r27
-88i7 Calculated_S 108m10 110r14 113r17 118r24
-90i7 Current_D
-91i7 Current_L
-93i7 Target_Pitch 126m10 131r14 155r16
-94i7 Target_Roll 127m10 131r35 143r16
+78t9 Position_Altitude
+90i7 Current_Pw 107m21 108r31 112r53 172r13 174r16 176m16
+91i7 Current_S 113m10 125m10 126r25 135r56 136r16 142r27 147r37 148r16 154r27
+. 159r37 160r16 166r27
+92i7 Calculated_S 112m10 114r14 117r17 122r24
+94i7 Current_D
+95i7 Current_L
+97i7 Target_Pitch 130m10 135r14 159r16
+98i7 Target_Roll 131m10 135r35 147r16
+191a4 Current_J 199m21 200r42
+192i4 Target_Pitch 200m7 202r21 204r10 205m10 206r13 207m10 216r13 218m13
+. 223r13 225m13 229r45
+193i4 Current_A 201r24 210m7 214r11 220r14 233r11 235r14
 X 12 kernel.ads
 36U9*Kernel 11|1r6 1r32
 X 17 kernel-serial_output.ads
 36U16*Serial_Output 11|1r13 1r39
-41U14*Put 11|134r16 146r16 158r16 173r16
-43U14*New_Line 11|133r16 145r16 157r16 172r16
+41U14*Put 11|138r16 150r16 162r16 178r16
+43U14*New_Line 11|137r16 149r16 161r16 177r16
 X 20 system.ads
 46U9*System 11|3r6 3r32
 X 40 tools.ads
 6U9*tools 11|5r6 5r25
-15U15*Start_Activity 11|99r10 191r4
-16U15*Finish_Activity 11|176r10 195r4
+15U15*Start_Activity 11|103r10 197r7 255r4
+16U15*Finish_Activity 11|181r10 241r7 259r4
 

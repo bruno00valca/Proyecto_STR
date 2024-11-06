@@ -75,12 +75,16 @@ package body fss is
       pragma Priority (3);
    end Speed;
 
+   task Position_Altitude is
+      pragma Priority(4);
+    end Position_Altitude;
 
    -----------------------------------------------------------------------
    ------------- body of tasks
    -----------------------------------------------------------------------
 
-   -- Aqui se escriben los cuerpos de las tareas
+   -- TAREA DE CONTROL DE VELOCIDAD
+
    task body Speed is
 
       Current_Pw   : Power_Samples_Type := 0;
@@ -93,7 +97,7 @@ package body fss is
       Target_Pitch : Pitch_Samples_Type;
       Target_Roll  : Roll_Samples_Type;
 
-   begin
+    begin
 
       loop
          Start_Activity ("Task de velocidad");
@@ -179,7 +183,66 @@ package body fss is
       end loop;
       
 
-   end Speed;
+    end Speed;
+
+-- TAREA CONTROL DE POSICION Y ALTITUD
+
+task body Position_Altitude is
+   Current_J : Joystick_Samples_Type := (0, 0);
+   Target_Pitch : Pitch_Samples_Type := 0;
+   Current_A : Altitude_Samples_Type:= Initial_Altitude;
+
+begin
+   loop
+      Start_Activity("Control_Cabeceo_Altitud");
+
+      Read_Joystick(Current_J);
+      Target_Pitch := Pitch_Samples_Type(Current_J(x));
+      Display_Altitude(Current_A);
+      Display_Pitch(Target_Pitch);
+
+      if Target_Pitch > 30 then
+         Target_Pitch := 30;
+      elsif Target_Pitch < -30 then
+         Target_Pitch := -30;
+      end if;
+
+      Current_A := Read_Altitude;
+      
+      -- Altitud inferior o igual a 2000m 
+
+      if (Current_A <= 2000) then
+         Cabeceo_Alabeo_Protegido.Set_Pitch(0);
+         if Target_Pitch < 0 then
+            -- Ignorar entrada de descenso cuando está por debajo de 2000 m
+            Target_Pitch := 0;
+         end if;
+      elsif (Current_A >= 10000) then
+         -- Nivelar la aeronave si la altitud es igual o superior a 10,000 m
+         Cabeceo_Alabeo_Protegido.Set_Pitch(0);
+         if Target_Pitch > 0 then
+            -- Ignorar entrada de ascenso cuando está por encima de 10,000 m
+            Target_Pitch := 0;
+         end if;
+      else
+         -- Ajustar el cabeceo según el joystick cuando esté en rango
+         Cabeceo_Alabeo_Protegido.Set_Pitch(Target_Pitch);
+      end if;
+
+      -- Alertas basadas en altitud
+      if (Current_A < 2500) then
+         Light_1(On);  -- Alertar cuando desciende por debajo de 2500 m
+      elsif (Current_A > 9500) then
+         Light_1(On);  -- Alertar cuando sube por encima de 9500 m
+      else
+         Light_1(Off);  -- Apagar la alerta si está en el rango seguro
+      end if;
+
+      Finish_Activity("Control_Cabeceo_Altitud");
+      delay until Clock + To_Time_Span(0.2);
+   end loop;
+end Position_Altitude;
+
 
 
    ----------------------------------------------------------------------
